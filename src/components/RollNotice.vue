@@ -22,7 +22,7 @@ export default {
   },
   data () {
     return {
-      noticePosition: 0
+      noticePosition: 0 // 列表位置
     }
   },
   compiled () {
@@ -31,8 +31,8 @@ export default {
       if (destination / 30 < this.notices.length) {
         this.move(destination, 500)
         destination += 30
-      } else {
-        this.noticePosition = 0
+      } else { // 列表到底
+        this.noticePosition = 0 // 设置列表为开始位置
         destination = 30
         this.move(destination, 500)
         destination += 30
@@ -40,7 +40,7 @@ export default {
     }, 2500)
   },
   methods: {
-    move (destination, duration) {
+    move (destination, duration) { // 实现滚动动画
       let speed = ((destination - this.noticePosition) * 1000) / (duration * 60)
       let count = 0
       let step = () => {
