@@ -1,6 +1,6 @@
 # vue-roll-notice
 
-> A Vue.js project
+> A Simple Vue Plugin
 
 ## Build Setup
 
